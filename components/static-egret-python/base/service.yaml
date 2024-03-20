@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: static-egret-python
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: static-egret-python 
+  name: static-egret-python
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: static-egret-python 
